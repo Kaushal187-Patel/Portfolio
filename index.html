@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaushal</title>
+  <link rel="icon" href="assets/images/my-avatar.png" type="image/x-icon">
+
+  
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+   
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #e0e0e0;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    }
+
+    /* Common Section Styles */
+    article {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .h2.article-title {
+      color: #00ff88;
+      font-weight: 600;
+      text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+      margin-bottom: 2rem;
+      padding-top: 2.7rem;
+    }
+
+    .h3 {
+      color: #4cc9f0;
+      font-weight: 500;
+      text-shadow: 0 0 8px rgba(76, 201, 240, 0.3);
+      margin-bottom: 1.5rem;
+      padding-top: 1.2rem;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      background: rgba(26, 26, 46, 0.95);
+      border-right: 1px solid rgba(76, 201, 240, 0.2);
+    }
+
+    .name {
+      color: #00ff88;
+      text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+    }
+
+    .title {
+      color: #4cc9f0;
+      text-shadow: 0 0 8px rgba(76, 201, 240, 0.3);
+    }
+
+    .sidebar-info p {
+      color: #e0e0e0;
+    }
+
+    .contact-title {
+      color: #4cc9f0;
+    }
+
+    .contact-link {
+      color: #00ff88;
+      transition: all 0.3s ease;
+    }
+
+    .contact-link:hover {
+      color: #4cc9f0;
+      text-shadow: 0 0 8px rgba(76, 201, 240, 0.5);
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background: rgba(26, 26, 46, 0.95);
+      border-bottom: 1px solid rgba(76, 201, 240, 0.2);
+    }
+
+    .navbar-link {
+      color: #e0e0e0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-link:hover,
+    .navbar-link.active {
+      color: #00ff88;
+      text-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
+    }
+
+    /* About Section */
+    .about-text p {
+      color: #e0e0e0;
+    }
+
+    .icon-text-pair {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem; /* Space between icon+text pairs */
+      gap: 0.8rem; /* Space between icon and text */
+    }
+
+    .icon-text-pair .icon-box {
+      flex-shrink: 0; /* Prevent icon from shrinking */
+      padding-top: 0.2em; /* Adjust alignment with text */
+      color: #4cc9f0; /* Icon color */
+    }
+
+    .icon-text-pair p {
+      margin: 0; /* Remove default paragraph margin */
+    }
+
+    .service-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(76, 201, 240, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .service-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      border-color: rgba(76, 201, 240, 0.3);
+    }
+
+    .service-item-title {
+      color: #00ff88;
+      text-shadow: 0 0 5px rgba(0, 255, 136, 0.2);
+    }
+
+    .service-item-text {
+      color: #e0e0e0;
+    }
+
+    /* Resume Section */
+    .timeline-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(76, 201, 240, 0.1);
+      border-radius: 12px;
+      padding: 1.8rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      border-color: rgba(76, 201, 240, 0.3);
+    }
+
+    .timeline-item-title {
+      color: #00ff88;
+      text-shadow: 0 0 5px rgba(0, 255, 136, 0.2);
+    }
+
+    .timeline-item span {
+      color: #4cc9f0;
+      background: rgba(76, 201, 240, 0.1);
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      border: 1px solid rgba(76, 201, 240, 0.2);
+    }
+
+    .timeline-text {
+      color: #e0e0e0;
+    }
+
+    /* Skills Section */
+    .skills-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(76, 201, 240, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .skill-progress-bg {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+
+    .skill-progress-fill {
+      background: linear-gradient(90deg, #4cc9f0 0%, #00ff88 100%);
+      border-radius: 10px;
+    }
+
+    /* Portfolio Section */
+    .portfolio .article-title {
+      padding-top: 2.7rem;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    .projects .h3 {
+      padding-top: 1.5rem;
+      margin-bottom: 2.5rem;
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* Portfolio Project Cards */
+    .project-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(76, 201, 240, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(76, 201, 240, 0.2);
+      border-color: rgba(76, 201, 240, 0.3);
+    }
+
+    .project-img {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .project-item:hover .project-img img {
+      transform: scale(1.1);
+    }
+
+    .project-title {
+      color: #00ff88;
+      font-size: 1.4rem;
+      margin: 1.2rem 0 0.5rem;
+      padding: 0 1.5rem;
+      text-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+    }
+
+    .project-category {
+      color: #4cc9f0;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      padding: 0 1.5rem;
+      display: inline-block;
+      background: rgba(76, 201, 240, 0.1);
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+    }
+
+    .project-description {
+      padding: 0 1.5rem 1.5rem;
+    }
+
+    .project-description p {
+      color: #e0e0e0;
+      line-height: 1.6;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .tech-stack {
+      color: #4cc9f0;
+      font-size: 0.95rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(76, 201, 240, 0.2);
+    }
+
+    /* Testimonials Section */
+    .testimonials-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(76, 201, 240, 0.1);
+      border-radius: 12px;
+      padding: 1.8rem;
+      transition: all 0.3s ease;
+    }
+
+    .testimonials-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      border-color: rgba(76, 201, 240, 0.3);
+    }
+
+    .testimonials-item-title {
+      color: #00ff88;
+      text-shadow: 0 0 5px rgba(0, 255, 136, 0.2);
+    }
+
+    .testimonials-subtitle {
+      color: #4cc9f0;
+    }
+
+    .testimonials-text p {
+      color: #e0e0e0;
+    }
+
+    /* Contact Section */
+    .contact-form {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(76, 201, 240, 0.1);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+
+    .form-input {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(76, 201, 240, 0.2);
+      color: #e0e0e0;
+      border-radius: 8px;
+    }
+
+    .form-input:focus {
+      border-color: #00ff88;
+      box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+    }
+
+    .form-btn {
+      background: linear-gradient(135deg, #4cc9f0 0%, #00ff88 100%);
+      color: #1a1a2e;
+      border: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .form-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+    }
+
+    /* Common Elements */
+    .icon-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #00ff88;
+      transition: all 0.3s ease;
+      margin-right: 0.8rem;
+    }
+
+    .icon-box:hover {
+      color: #4cc9f0;
+      transform: translateY(-2px);
+    }
+
+    .icon-box ion-icon {
+      font-size: 1.8rem;
+    }
+
+    .title-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 2rem;
+      padding: 1.2rem 0 1rem;
+      border-bottom: 2px solid rgba(76, 201, 240, 0.2);
+    }
+
+    .title-wrapper .icon-box ion-icon {
+      font-size: 2rem;
+    }
+
+    .skills-item .icon-box {
+      margin-right: 1rem;
+    }
+
+    .skills-item .icon-box ion-icon {
+      font-size: 1.5rem;
+    }
+
+    .social-link {
+      color: #e0e0e0;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      color: #00ff88;
+      transform: translateY(-3px);
+    }
+
+    .social-link ion-icon {
+      font-size: 1.8rem;
+    }
+
+    /* Section-specific icon colors */
+    .education .icon-box ion-icon { color: #00ff88; }
+    .skills .icon-box ion-icon { color: #4cc9f0; }
+    .projects .icon-box ion-icon { color: #00ff88; }
+    .certifications .icon-box ion-icon { color: #4cc9f0; }
+    .activities .icon-box ion-icon { color: #00ff88; }
+    .contact .icon-box ion-icon { color: #4cc9f0; }
+
+    @media (max-width: 768px) {
+      .icon-box ion-icon { font-size: 1.5rem; }
+      .title-wrapper .icon-box ion-icon { font-size: 1.8rem; }
+      .skills-item .icon-box ion-icon { font-size: 1.3rem; }
+    }
+
+    /* Certification Modal Styles */
+    .cert-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      overflow: auto;
+    }
+
+    .cert-modal-content {
+      position: relative;
+      margin: auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 800px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .cert-modal-content img {
+      max-width: 100%;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .cert-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cert-modal-close ion-icon {
+      color: #e0e0e0;
+      font-size: 24px;
+    }
+
+    .cert-modal-close:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: rotate(90deg);
+    }
+
+    .certification-link {
+      cursor: pointer;
+    }
+
+    /* Certification Grid Styles */
+    .certification-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+
+    /* Updated Certification Card Styles */
+    .certification-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(76, 201, 240, 0.15);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .certification-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 8px 30px rgba(0, 255, 136, 0.15);
+      border-color: rgba(0, 255, 136, 0.3);
+    }
+
+    .certification-img {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.2);
+      margin: 0;
+    }
+
+    .certification-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .certification-card:hover .certification-img img {
+      transform: scale(1.1);
+    }
+
+    .certification-content {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .certification-header {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid rgba(76, 201, 240, 0.1);
+    }
+
+    .certification-icon {
+      font-size: 2.5rem;
+      color: #00ff88;
+      background: rgba(0, 255, 136, 0.1);
+      padding: 0.8rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 255, 136, 0.1);
+    }
+
+    .certification-title {
+      color: #00ff88;
+      font-size: 1.3rem;
+      margin: 0;
+      text-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+      font-weight: 600;
+    }
+
+    .certification-info {
+      margin-bottom: 1.5rem;
+    }
+
+    .certification-issuer {
+      display: inline-block;
+      color: #4cc9f0;
+      background: rgba(76, 201, 240, 0.1);
+      padding: 0.5rem 1.2rem;
+      border-radius: 25px;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(76, 201, 240, 0.2);
+    }
+
+    .certification-text {
+      color: #e0e0e0;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0.5rem 0;
+    }
+
+    .certification-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(76, 201, 240, 0.1);
+    }
+
+    .certification-date {
+      color: #4cc9f0;
+      font-size: 1rem;
+      font-weight: 500;
+      background: rgba(76, 201, 240, 0.1);
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      border: 1px solid rgba(76, 201, 240, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .certification-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .certification-card {
+        margin: 0 1rem 1.5rem;
+      }
+      
+      .certification-img {
+        height: 180px;
+      }
+      
+      .certification-content {
+        padding: 1.2rem;
+      }
+    }
+
+    .certification-view {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      background: rgba(0, 255, 136, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .certification-view:hover {
+      background: rgba(0, 255, 136, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .certification-thumbnail {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .view-text {
+      color: #00ff88;
+      font-size: 0.9rem;
+    }
+
+    /* Updated View Certificate Button Styles */
+    .view-certificate-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      background: rgba(0, 255, 136, 0.1);
+      color: #00ff88;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .view-certificate-btn:hover {
+      background: rgba(0, 255, 136, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .view-certificate-btn ion-icon {
+      font-size: 1.2rem;
+    }
+
+    .image-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .close-modal {
+      position: fixed;
+      right: 25px;
+      top: 15px;
+      color: #f1f1f1;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 10000;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .close-modal:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: rotate(90deg);
+    }
+
+    .certification-img {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .certification-img:hover {
+      transform: scale(1.02);
+    }
+
+    .activities .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Default for larger screens */
+      gap: 2rem;
+    }
+
+    @media (min-width: 992px) {
+      .activities .project-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .activities .project-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    @media (min-width: 992px) { /* Adjust breakpoint as needed */
+      .portfolio .project-list {
+        grid-template-columns: repeat(2, 1fr); /* Ensure 2 columns */
+        gap: 2rem; /* Maintain gap */
+      }
+
+      .portfolio .project-list .project-item {
+        max-width: none; /* Remove max-width */
+        margin: 0; /* Remove auto margins */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .portfolio .project-list {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+ 
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/Me.jpg" alt="Piyush Patel" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Piyush Patel">Keraliya Kaushal </h1>
+
+          <p class="title">Software Developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="kaushal151131@gmail.com" class="contact-link">kaushal151131@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+91 9265327760" class="contact-link">+91 9265327760</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">30 nov, 2004</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Gandhinagar, Gujarat</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="www.linkedin.com/in/keraliya-kaushal-2bb578273" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/Kaushal187-Patel" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+        
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Certifications</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Activities</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I am a motivated and detail-oriented Computer Engineering student currently pursuing a B.Tech at LDRP Institute of Technology and Research. I am passionate about technology, with hands-on experience in web development, data science, and machine learning.
+          </p>
+
+          <h5> <b>Yoga Guru </b>– A real-time yoga pose classifier using Python, OpenCV, and MediaPipe.</h5>
+          <h5><b>Funland </b>– A nostalgic web-based game platform developed with HTML, CSS, and JavaScript.</h5>
+          <br>
+          <p>
+            In addition to technical skills in Python, Java, React, Node.js, MongoDB, and more, I bring strong soft skills like teamwork, communication, and problem-solving.
+          </p>
+          <p>
+            I have also participated in national-level events like the Smart India Hackathon and served in core committees for college tech fests, demonstrating leadership and collaboration skills.
+          </p>
+          <p>
+            I'm currently looking for an internship opportunity where I can apply my skills, gain industry experience, and contribute meaningfully to real-world tech solutions.
+
+
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+<!--
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Professor Name" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Dr. Rajesh Patel</h4>
+                <p class="testimonials-subtitle">Professor, LDRP-ITR</p>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Piyush has shown exceptional dedication in his academic pursuits and project work. His Yoga Guru project 
+                    demonstrates innovative thinking and technical expertise. He consistently delivers high-quality work and 
+                    shows great potential in software development and machine learning.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Project Mentor" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Prof. Meera Sharma</h4>
+                <p class="testimonials-subtitle">Project Mentor, Apna College</p>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Working with Piyush on the Funland project was a great experience. His attention to detail and
+                    commitment to creating an engaging user experience was impressive. He has a strong grasp of web
+                    development technologies and consistently delivers clean, efficient code.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Team Lead" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Rahul Verma</h4>
+                <p class="testimonials-subtitle">Senior Developer, Internship Studio</p>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Piyush's performance in the Common Internship Test was outstanding. His problem-solving skills and 
+                    technical knowledge were evident in his solutions. He shows great potential as a developer and 
+                    would be a valuable addition to any development team.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Course Instructor" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Dr. Amit Kumar</h4>
+                <p class="testimonials-subtitle">Course Coordinator, NPTEL</p>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Piyush's performance in the Python for Data Science course was exceptional. His understanding of 
+                    data science concepts and ability to implement them in practical projects shows his strong 
+                    analytical and programming skills. He is a dedicated learner with great potential in the field.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section> -->
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Professor Name" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Dr. Rajesh Patel</h4>
+              <p class="modal-subtitle">Professor, LDRP-ITR</p>
+
+              <time datetime="2024-03-14">March 14, 2024</time>
+
+              <div data-modal-text>
+                <p>
+                  Piyush has shown exceptional dedication in his academic pursuits and project work. His Yoga Guru project 
+                  demonstrates innovative thinking and technical expertise. He consistently delivers high-quality work and 
+                  shows great potential in software development and machine learning. His ability to combine technical 
+                  knowledge with practical implementation is particularly impressive.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline education">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="school"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Bachelor of Technology in Computer Engineering</h4>
+
+              <span>2022 — 2026</span>
+
+              <p class="timeline-text">
+                Currently pursuing B.Tech in Computer Engineering at LDRP-ITR (Leelaben Dashrathbhai Ramdas Patel Institute of Technology and Research).
+                Currently in 6th semester with focus on computer engineering concepts, software development, and programming.
+                Learning core engineering principles, data structures, algorithms, and modern programming practices.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Higher Secondary Education (12th Grade)</h4>
+
+              <span>2020 — 2022</span>
+
+              <p class="timeline-text">
+                Completed higher secondary education with focus on Science and Mathematics.
+                Developed strong foundation in analytical thinking and problem-solving skills.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Secondary Education (10th Grade)</h4>
+
+              <span>2018 — 2020</span>
+
+              <p class="timeline-text">
+                Completed secondary education with distinction.
+                Developed fundamental knowledge in core subjects and basic computer skills.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill skills">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="code-working"></ion-icon>
+            </div>
+            <h3 class="h3 skills-title">Technical Skills</h3>
+          </div>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <div class="icon-box">
+                  <ion-icon name="logo-python"></ion-icon>
+                </div>
+                <h5 class="h5">Programming Languages</h5>
+                <data value="85">85%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+              <p class="skill-text">Python, Java</p>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <div class="icon-box">
+                  <ion-icon name="logo-html5"></ion-icon>
+                </div>
+                <h5 class="h5">Frontend Development</h5>
+                <data value="95">95%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 95%;"></div>
+              </div>
+              <p class="skill-text">HTML, CSS, JavaScript, React JS (Framework:- Payloadcms, Medusa)</p>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <div class="icon-box">
+                  <ion-icon name="server-outline"></ion-icon>
+                </div>
+                <h5 class="h5">Backend Development</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+              <p class="skill-text">Node.js, Express.js</p>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <div class="icon-box">
+                  <ion-icon name="analytics-outline"></ion-icon>
+                </div>
+                <h5 class="h5">Machine Learning</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+              <p class="skill-text">Pandas, NumPy</p>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <div class="icon-box">
+                  <ion-icon name="server"></ion-icon>
+                </div>
+                <h5 class="h5">Database Management</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%"></div>
+              </div>
+              <p class="skill-text">MongoDB, PostgreSQL</p>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <div class="icon-box">
+                  <ion-icon name="construct-outline"></ion-icon>
+                </div>
+                <h5 class="h5">Development Tools</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+              <p class="skill-text">VS Code, GitHub, Cursor</p>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase"></ion-icon>
+            </div>
+            <h3 class="h3">Projects</h3>
+          </div>
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Machine Learning</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web Development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Machine Learning</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web Development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item active" data-filter-item data-category="machine learning">
+              <a href="#">
+
+                <figure class="project-img" onclick="openImageModal('./assets/images/Yogaguru.png')">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/Yogaguru.png" alt="Yoga Guru" loading="lazy" width="600" height="250">
+                </figure>
+
+                <h3 class="project-title">Yoga Guru</h3>
+
+                <p class="project-category">Machine Learning</p>
+
+                <div class="project-description">
+                  <p>
+                    Built real-time yoga pose classifier using webcam, OpenCV, and MediaPipe.
+                    Trained ML model on custom dataset to identify poses like Warrior, Goddess, Plank.
+                    Implemented visual feedback system (green for correct, red for incorrect poses).
+                    Enhanced model accuracy for unknown pose detection.
+                  </p>
+                  <p class="tech-stack">
+                    <strong>Tech Stack:</strong> Python, OpenCV, MediaPipe, scikit-learn, Node.js, React
+                  </p>
+                </div>
+
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img" onclick="openImageModal('./assets/images/Funland.jpg')">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/Funland.jpg" alt="Funland" loading="lazy" width="600" height="250">
+                </figure>
+
+                <h3 class="project-title">Funland – Nostalgic Games Platform</h3>
+
+                <p class="project-category">Web Development</p>
+
+                <div class="project-description">
+                  <p>
+                    Created a web-based platform featuring classic games and childhood memory content.
+                    Aimed at reviving nostalgic experiences through interactive, fun elements.
+                    Curated collection of traditional childhood games that have disappeared in modern times.
+                  </p>
+                  <p class="tech-stack">
+                    <strong>Tech Stack:</strong> HTML, CSS, JavaScript
+                  </p>
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!--
+        - #CERTIFICATIONS
+      -->
+
+      <article class="certifications" data-page="certifications">
+
+        <header>
+          <h2 class="h2 article-title">Certifications & Courses</h2>
+        </header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="ribbon"></ion-icon>
+            </div>
+            <h3 class="h3">Certifications & Courses</h3>
+          </div>
+
+          <div class="certification-grid">
+            <div class="certification-card">
+              <figure class="certification-img" onclick="openImageModal('./assets/images/Nptel.jpg')">
+                <img src="./assets/images/Nptel.jpg" alt="Python For Data Science Certificate" loading="lazy">
+              </figure>
+              <div class="certification-content">
+                <div class="certification-header">
+                  <ion-icon name="logo-python" class="certification-icon"></ion-icon>
+                  <h4 class="h4 certification-title">Python For Data Science</h4>
+                </div>
+                <div class="certification-info">
+                  <span class="certification-issuer">NPTEL</span>
+                  <p class="certification-text">
+                    Completed comprehensive course on Python programming for data science applications.
+                    Covered essential data science libraries and tools.
+                  </p>
+                </div>
+                <div class="certification-footer">
+                  <span class="certification-date">2024</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="certification-card">
+              <figure class="certification-img" onclick="openImageModal('./assets/images/University of wollongong Australia.jpg')">
+                <img src="./assets/images/University of wollongong Australia.jpg" alt="AI Agents Master Class Certificate" loading="lazy">
+              </figure>
+              <div class="certification-content">
+                <div class="certification-header">
+                  <ion-icon name="flask-outline" class="certification-icon"></ion-icon>
+                  <h4 class="h4 certification-title">Create your AI Agents: A Practical Master Class</h4>
+                </div>
+                <div class="certification-info">
+                  <span class="certification-issuer">University of Wollongong Australia - India</span>
+                  <p class="certification-text">
+                    Active participation in a Master class focused on creating AI agents.
+                  </p>
+                </div>
+                <div class="certification-footer">
+                  <span class="certification-date">2025</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="certification-card">
+              <figure class="certification-img" onclick="openImageModal('./assets/images/APNA CLG DSA_page-0001.jpg')">
+                <img src="./assets/images/APNA CLG DSA_page-0001.jpg" alt="Data Structures and Algorithms Certificate" loading="lazy">
+              </figure>
+              <div class="certification-content">
+                <div class="certification-header">
+                  <ion-icon name="code-working" class="certification-icon"></ion-icon>
+                  <h4 class="h4 certification-title">Data Structures and Algorithms with Java</h4>
+                </div>
+                <div class="certification-info">
+                  <span class="certification-issuer">Apna College</span>
+                  <p class="certification-text">
+                    Mastered fundamental data structures and algorithms using Java.
+                    Implemented various algorithms and solved complex programming problems.
+                  </p>
+                </div>
+                <div class="certification-footer">
+                  <span class="certification-date">2023</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="certification-card">
+              <figure class="certification-img" onclick="openImageModal('./assets/images/certificate-sigma-batch-development-66b4d31180c9fe2a87035972_page-0001.jpg')">
+                <img src="./assets/images/certificate-sigma-batch-development-66b4d31180c9fe2a87035972_page-0001.jpg" alt="Web Development Certificate" loading="lazy">
+              </figure>
+              <div class="certification-content">
+                <div class="certification-header">
+                  <ion-icon name="globe-outline" class="certification-icon"></ion-icon>
+                  <h4 class="h4 certification-title">Web Development</h4>
+                </div>
+                <div class="certification-info">
+                  <span class="certification-issuer">Apna College</span>
+                  <p class="certification-text">
+                    Comprehensive web development course covering frontend and backend technologies.
+                    Built responsive and interactive web applications.
+                  </p>
+                </div>
+                <div class="certification-footer">
+                  <span class="certification-date">2023</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="certification-card">
+              <figure class="certification-img" onclick="openImageModal('./assets/images/inten.jpg')">
+                <img src="./assets/images/inten.jpg" alt="Common Internship Test Certificate" loading="lazy">
+              </figure>
+              <div class="certification-content">
+                <div class="certification-header">
+                  <ion-icon name="trophy-outline" class="certification-icon"></ion-icon>
+                  <h4 class="h4 certification-title">Common Internship Test</h4>
+                </div>
+                <div class="certification-info">
+                  <span class="certification-issuer">Internship Studio</span>
+                  <p class="certification-text">
+                    Successfully completed the common internship test demonstrating practical skills
+                    and knowledge in software development.
+                  </p>
+                </div>
+                <div class="certification-footer">
+                  <span class="certification-date">2023</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="certification-card">
+              <figure class="certification-img" onclick="openImageModal('./assets/images/5-day.jpg')">
+                <img src="./assets/images/5-day.jpg" alt="Laravel and WordPress Hands-on Series Certificate" loading="lazy">
+              </figure>
+              <div class="certification-content">
+                <div class="certification-header">
+                  <ion-icon name="globe-outline" class="certification-icon"></ion-icon>
+                  <h4 class="h4 certification-title">5-day Hands-on Series on Laravel Framework and WordPress CMS</h4>
+                </div>
+                <div class="certification-info">
+                  <span class="certification-issuer">LDRP-ITR, MCA Department</span>
+                  <p class="certification-text">
+                    Active participation and successful completion of a 5-day Hands-on Series on Laravel Framework and WordPress CMS.
+                  </p>
+                </div>
+                <div class="certification-footer">
+                  <span class="certification-date">2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #ACTIVITIES
+      -->
+
+      <article class="activities" data-page="activities">
+
+        <header>
+          <h2 class="h2 article-title">Extracurricular Activities</h2>
+        </header>
+
+        <section class="projects">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="trophy"></ion-icon>
+            </div>
+            <h3 class="h3">Hackathons & Competitions</h3>
+          </div>
+
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Hackathons</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Leadership</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Competition</button>
+            </li>
+          </ul>
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+
+            <ul class="select-list">
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Hackathons</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Leadership</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Competition</button>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="project-list">
+            <li class="project-item active" data-filter-item data-category="hackathons">
+              <a href="#">
+                <figure class="project-img" onclick="openImageModal('./assets/images/smartindia.png')">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="trophy-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/smartindia.png" alt="Smart India Hackathon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Smart India Hackathon</h3>
+                <p class="project-category">Hackathon</p>
+
+                <div class="project-description">
+                  <p>
+                    Participated in the prestigious Smart India Hackathon, showcasing innovative problem-solving skills
+                    and technical expertise. Collaborated with team members to develop solutions for real-world challenges.
+                  </p>
+                  <p class="tech-stack">
+                    <strong>Year:</strong> 2024
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="hackathons">
+              <a href="#">
+                <figure class="project-img" onclick="openImageModal('./assets/images/merathon.jpg')">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="code-working-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/merathon.jpg" alt="Code Unnati Marathon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Code Unnati Marathon</h3>
+                <p class="project-category">Competition</p>
+
+                <div class="project-description">
+                  <p>
+                    Engaged in the Code Unnati Marathon, demonstrating coding proficiency and competitive spirit.
+                    Worked on challenging programming problems and enhanced problem-solving abilities.
+                  </p>
+                  <p class="tech-stack">
+                    <strong>Year:</strong> 2023
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="leadership">
+              <a href="#">
+                <figure class="project-img" onclick="openImageModal('./assets/images/XENESIS-2025.jpg')">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="people-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/XENESIS-2025.jpg" alt="Tech-Feast Xenesis" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Tech-Feast Xenesis 2025</h3>
+                <p class="project-category">Leadership</p>
+
+                <div class="project-description">
+                  <p>
+                    Serving as a Core-committee member for the college's annual technical festival Xenesis-2025.
+                    Contributing to event planning, coordination, and execution of various technical competitions
+                    and workshops. Leading a team to ensure successful organization of the event.
+                  </p>
+                  <p class="tech-stack">
+                    <strong>Year:</strong> 2025
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="leadership">
+              <a href="#">
+                <figure class="project-img" onclick="openImageModal('./assets/images/XENSIS_2024.jpg')">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="people-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/XENSIS_2024.jpg" alt="Xenesis 2024 Volunteer Certificate" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Xenesis 2024 Volunteer</h3>
+                <p class="project-category">Leadership</p>
+
+                <div class="project-description">
+                  <p>
+                    Volunteered as a Coordinator for the Decoration Committee at Xenesis-2024.
+                    Assisted in the planning and execution of decoration activities for the college technical festival.
+                  </p>
+                  <p class="tech-stack">
+                    <strong>Year:</strong> 2024
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="competition">
+              <a href="#">
+                <figure class="project-img" onclick="openImageModal('./assets/images/XENSIS_2023.jpg')">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="trophy-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/XENSIS_2023.jpg" alt="Xenesis 2023 Participation Certificate" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Xenesis 2023 Participation</h3>
+                <p class="project-category">Competition</p>
+
+                <div class="project-description">
+                  <p>
+                    Participated in the X-Cricket event organized as part of Xenesis 2023.
+                    Demonstrated sportsmanship and engagement in college extracurricular activities.
+                  </p>
+                  <p class="tech-stack">
+                    <strong>Year:</strong> 2023
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58761.1438709284!2d72.6277!3d23.2156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2b987c6d6809%3A0xf86f06a7873e0391!2sGandhinagar%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1647608789441!5m2!1sen!2sin"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="mail"></ion-icon>
+            </div>
+            <h3 class="h3 form-title">Contact Form</h3>
+          </div>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Keep other existing scripts, but remove the certification modal code
+  });
+
+  function openCertModal(imageSrc) {
+    const modal = document.getElementById('certModal');
+    const modalImg = document.getElementById('certModalImage');
+    modal.style.display = "block";
+    modalImg.src = imageSrc;
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+  }
+
+  function closeCertModal() {
+    const modal = document.getElementById('certModal');
+    modal.style.display = "none";
+    document.body.style.overflow = ''; // Restore scrolling
+  }
+
+  // Update all certification links to use the modal
+  document.addEventListener('DOMContentLoaded', function() {
+    const certLinks = document.querySelectorAll('.certification-link');
+    certLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const imageSrc = this.getAttribute('href');
+        openCertModal(imageSrc);
+      });
+    });
+
+    // Close modal when clicking outside the image
+    const modal = document.getElementById('certModal');
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        closeCertModal();
+      }
+    });
+
+    // Close modal on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.style.display === 'block') {
+        closeCertModal();
+      }
+    });
+  });
+
+  // Updated Image Modal Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.querySelector(".close-modal");
+
+    // Global function to open modal
+    window.openImageModal = function(imageSrc) {
+      try {
+        console.log('Attempting to open modal with image:', imageSrc); // Debug log
+        if (!imageSrc || !imageSrc.endsWith('.jpg') && !imageSrc.endsWith('.png')) {
+          console.error('Invalid image path:', imageSrc);
+          return;
+        }
+        
+        modal.style.display = "block";
+        modalImg.src = imageSrc;
+        modalImg.onerror = function() {
+          console.error('Failed to load image:', imageSrc);
+          modal.style.display = "none";
+          alert('Failed to load certificate image. Please check the image path.');
+        };
+        document.body.style.overflow = 'hidden';
+      } catch (error) {
+        console.error('Error opening modal:', error);
+      }
+    }
+
+    // Close modal function
+    function closeModal() {
+      modal.style.display = "none";
+      document.body.style.overflow = '';
+    }
+
+    // Close button click
+    if (closeBtn) {
+      closeBtn.onclick = closeModal;
+    }
+
+    // Click outside modal
+    modal.onclick = function(e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    }
+
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.style.display === 'block') {
+        closeModal();
+      }
+    });
+  });
+  </script>
+
+  <!-- Add this before the closing body tag -->
+  <div id="imageModal" class="image-modal">
+    <div class="modal-wrapper">
+      <span class="close-modal">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+  </div>
+
+</body>
+
+</html>
