@@ -1,28 +1,4 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
-
-  /**
-   * colors
-   */
-
-  /* gradient */
-
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
     hsl(240, 1%, 25%) 3%, 
@@ -115,9 +91,7 @@
 
 
 
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
+
 
 *, *::before, *::after {
   margin: 0;
@@ -296,9 +270,6 @@ article.active {
 
 
 
-/*-----------------------------------*\
-  #MAIN
-\*-----------------------------------*/
 
 main {
   margin: 15px 12px;
@@ -310,9 +281,6 @@ main {
 
 
 
-/*-----------------------------------*\
-  #SIDEBAR
-\*-----------------------------------*/
 
 .sidebar {
   margin-bottom: 15px;
@@ -450,9 +418,6 @@ main {
 
 
 
-/*-----------------------------------*\
-  #NAVBAR
-\*-----------------------------------*/
 
 .navbar {
   position: fixed;
@@ -491,9 +456,6 @@ main {
 
 
 
-/*-----------------------------------*\
-  #ABOUT
-\*-----------------------------------*/
 
 .about .article-title { margin-bottom: 15px; }
 
@@ -508,9 +470,6 @@ main {
 
 
 
-/**
- * #service 
- */
 
 .service { margin-bottom: 35px; }
 
@@ -556,9 +515,7 @@ main {
 }
 
 
-/**
- * #testimonials 
- */
+
 
 .testimonials { margin-bottom: 30px; }
 
@@ -608,9 +565,6 @@ main {
 }
 
 
-/**
- * #testimonials-modal
- */
 
 .modal-container {
   position: fixed;
@@ -830,10 +784,6 @@ main {
 }
 
 
-/**
- * skills 
- */
-
 .skills-title { margin-bottom: 20px; }
 
 .skills-list { padding: 20px; }
@@ -871,9 +821,6 @@ main {
 
 
 
-/*-----------------------------------*\
-  #PORTFOLIO
-\*-----------------------------------*/
 
 .filter-list { display: none; }
 
@@ -1030,9 +977,7 @@ main {
 
 
 
-/*-----------------------------------*\
-  #BLOG
-\*-----------------------------------*/
+
 
 .blog-posts { margin-bottom: 10px; }
 
@@ -1118,9 +1063,6 @@ main {
 
 
 
-/*-----------------------------------*\
-  #CONTACT
-\*-----------------------------------*/
 
 .mapbox {
   position: relative;
@@ -1228,27 +1170,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-/*-----------------------------------*\
-  #RESPONSIVE
-\*-----------------------------------*/
-
-/**
- * responsive larger than 450px screen
- */
 
 @media (min-width: 450px) {
 
-  /**
-   * client
-   */
 
   .clients-item { min-width: calc(33.33% - 10px); }
 
 
 
-  /**
-   * #PORTFOLIO, BLOG 
-   */
 
   .project-img,
   .blog-banner-box { height: auto; }
@@ -1258,23 +1187,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-
-/**
- * responsive larger than 580px screen
- */
-
 @media (min-width: 580px) {
 
-  /**
-   * CUSTOM PROPERTY
-   */
 
   :root {
 
-    /**
-     * typography
-     */
-
+  
     --fs-1: 32px;
     --fs-2: 24px;
     --fs-3: 26px;
@@ -1287,9 +1205,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #REUSED STYLE
-   */
 
   .sidebar, article {
     width: 520px;
@@ -1316,9 +1231,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #MAIN
-   */
+
 
   main {
     margin-top: 60px;
@@ -1327,9 +1240,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #SIDEBAR
-   */
+ 
 
   .sidebar {
     max-height: 180px;
@@ -1372,9 +1283,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #NAVBAR
-   */
+
 
   .navbar { border-radius: 20px 20px 0 0; }
 
@@ -1384,15 +1293,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #ABOUT
-   */
+ 
 
   .about .article-title { margin-bottom: 20px; }
 
   .about-text { margin-bottom: 40px; }
 
-  /* service */
 
   .service-item {
     display: flex;
@@ -1409,7 +1315,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .service-content-box { text-align: left; }
 
-  /* testimonials */
 
   .testimonials-title { margin-bottom: 25px; }
 
@@ -1442,7 +1347,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     -webkit-line-clamp: 2;
   }
 
-  /* testimonials modal */
 
   .modal-container { padding: 20px; }
 
@@ -1474,7 +1378,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 35px;
   }
 
-  /* clients */
 
   .clients-list {
     gap: 50px;
@@ -1487,9 +1390,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #RESUME
-   */
+
 
   .timeline-list { margin-left: 65px; }
 
@@ -1505,9 +1406,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #PORTFOLIO, BLOG
-   */
+
 
   .project-img, .blog-banner-box { border-radius: 16px; }
 
@@ -1517,9 +1416,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #CONTACT
-   */
 
   .mapbox {
     height: 380px;
@@ -1548,15 +1444,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-/**
- * responsive larger than 768px screen
- */
-
 @media (min-width: 768px) {
 
-  /**
-   * REUSED STYLE
-   */
+
 
   .sidebar, article { width: 700px; }
 
@@ -1564,9 +1454,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * SIDEBAR
-   */
 
   .contacts-list {
     grid-template-columns: 1fr 1fr;
@@ -1575,19 +1462,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * NAVBAR
-   */
 
   .navbar-link { --fs-8: 15px; }
 
 
 
-  /**
-   * ABOUT
-   */
 
-  /* testimonials modal */
 
   .testimonials-modal {
     gap: 35px;
@@ -1598,9 +1478,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * PORTFOLIO
-   */
+  
 
   .article-title { padding-bottom: 20px; }
 
@@ -1625,15 +1503,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .filter-item button.active { color: var(--orange-yellow-crayola); }
 
-  /* portfolio and blog grid */
 
   .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
 
 
 
-  /**
-   * CONTACT
-   */
+
 
   .input-wrapper { grid-template-columns: 1fr 1fr; }
 
@@ -1648,21 +1523,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-/**
- * responsive larger than 1024px screen
- */
+
 
 @media (min-width: 1024px) {
 
-  /**
-   * CUSTOM PROPERTY
-   */
+
 
   :root {
 
-    /**
-    * shadow
-    */
+  
 
     --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
     --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
@@ -1672,9 +1541,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * REUSED STYLE
-   */
+
 
   .sidebar, article {
     width: 950px;
@@ -1683,9 +1550,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * MAIN 
-   */
 
   main { margin-bottom: 60px; }
 
@@ -1695,11 +1559,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin: auto;
   }
 
-
-
-  /**
-   * NAVBAR
-   */
 
   .navbar {
     position: absolute;
@@ -1722,38 +1581,28 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * ABOUT
-   */
 
-  /* service */
 
   .service-list {
     grid-template-columns: 1fr 1fr;
     gap: 20px 25px;
   }
 
-  /* testimonials */
 
   .testimonials-item { min-width: calc(50% - 15px); }
 
-  /* clients */
 
   .clients-item { min-width: calc(25% - 38px); }
 
 
 
-  /**
-   * PORTFOLIO
-   */
+
 
   .project-list { grid-template-columns: repeat(3, 1fr); }
 
 
 
-  /**
-   * BLOG
-   */
+  
 
   .blog-banner-box { height: 230px; }
 
@@ -1763,15 +1612,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-/**
- * responsive larger than 1250px screen
- */
-
 @media (min-width: 1250px) {
 
-  /**
-   * RESET
-   */
+
 
   body::-webkit-scrollbar { width: 20px; }
 
@@ -1791,9 +1634,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * REUSED STYLE
-   */
+ 
 
   .sidebar, article { width: auto; }
 
@@ -1801,9 +1642,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * MAIN
-   */
 
   main {
     max-width: 1200px;
@@ -1822,9 +1660,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * SIDEBAR
-   */
+
 
   .sidebar {
     position: sticky;
@@ -1875,10 +1711,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .social-list { justify-content: center; }
 
 
-
-  /**
-	 * RESUME
-	 */
 
   .timeline-text { max-width: 700px; }
 
