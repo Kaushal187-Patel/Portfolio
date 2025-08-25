@@ -375,7 +375,153 @@
       display: flex;
       align-items: center;
       gap: 0.8rem;
+
+
+
+
+    /* Internship Section Styles */
+    .internship-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(76, 201, 240, 0.1);
+      border-radius: 16px;
+      padding: 2rem;
       margin-bottom: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .internship-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 255, 136, 0.15);
+      border-color: rgba(0, 255, 136, 0.3);
+    }
+
+    .company-name {
+      color: #00ff88;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+    }
+
+    .company-location {
+      color: #4cc9f0;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .internship-duration {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .duration-badge, .mode-badge, .time-badge {
+      background: rgba(76, 201, 240, 0.1);
+      color: #4cc9f0;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      border: 1px solid rgba(76, 201, 240, 0.2);
+      font-size: 0.9rem;
+    }
+
+    .section-title {
+      color: #00ff88;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 8px rgba(0, 255, 136, 0.2);
+    }
+
+    .achievement-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .achievement-list li {
+      color: #e0e0e0;
+      margin-bottom: 0.8rem;
+      padding-left: 0;
+      line-height: 1.6;
+    }
+
+    .tech-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .tech-badge {
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .tech-badge.frontend {
+      background: rgba(0, 255, 136, 0.1);
+      color: #00ff88;
+      border: 1px solid rgba(0, 255, 136, 0.2);
+    }
+
+    .tech-badge.backend {
+      background: rgba(76, 201, 240, 0.1);
+      color: #4cc9f0;
+      border: 1px solid rgba(76, 201, 240, 0.2);
+    }
+
+    .tech-badge.framework {
+      background: rgba(255, 107, 107, 0.1);
+      color: #ff6b6b;
+      border: 1px solid rgba(255, 107, 107, 0.2);
+    }
+
+    .certificate-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .certificate-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(76, 201, 240, 0.1);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .certificate-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 255, 136, 0.2);
+      border-color: rgba(0, 255, 136, 0.3);
+    }
+
+    .certificate-thumb {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.8rem;
+    }
+
+    .certificate-label {
+      color: #4cc9f0;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .internship-duration {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      .certificate-gallery {
+        grid-template-columns: 1fr;
+      }
+    } 2rem;
       padding: 1.2rem 0 1rem;
       border-bottom: 2px solid rgba(76, 201, 240, 0.2);
     }
@@ -930,6 +1076,10 @@
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Certifications</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Internship</button>
           </li>
 
           <li class="navbar-item">
@@ -1672,6 +1822,137 @@
                 </div>
               </div>
             </div>
+
+            <div class="certification-card">
+              <figure class="certification-img" onclick="openImageModal('./assets/images/TSC.jpg')">
+                <img src="./assets/images/TSC.jpg" alt="TSC Internship Certificate" loading="lazy">
+              </figure>
+              <div class="certification-content">
+                <div class="certification-header">
+                  <ion-icon name="briefcase-outline" class="certification-icon"></ion-icon>
+                  <h4 class="h4 certification-title">Full-Stack Developer Internship</h4>
+                </div>
+                <div class="certification-info">
+                  <span class="certification-issuer">The Special Character</span>
+                  <p class="certification-text">
+                    Successfully completed Full-Stack Developer Internship at The Special Character, Ahmedabad. Worked on live T-Shirt Design Platform using React.js, Node.js, Medusa.js, and Payload CMS.
+                  </p>
+                </div>
+                <div class="certification-footer">
+                  <span class="certification-date">2025</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="certification-card">
+              <figure class="certification-img" onclick="openImageModal('./assets/images/TSC-offer.jpg')">
+                <img src="./assets/images/TSC-offer.jpg" alt="TSC Offer Letter" loading="lazy">
+              </figure>
+              <div class="certification-content">
+                <div class="certification-header">
+                  <ion-icon name="document-text-outline" class="certification-icon"></ion-icon>
+                  <h4 class="h4 certification-title">Internship Offer Letter</h4>
+                </div>
+                <div class="certification-info">
+                  <span class="certification-issuer">The Special Character</span>
+                  <p class="certification-text">
+                    Official offer letter for Full-Stack Developer Internship position at The Special Character, confirming selection for the 1.5-month intensive program.
+                  </p>
+                </div>
+                <div class="certification-footer">
+                  <span class="certification-date">2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #INTERNSHIP
+      -->
+
+      <article class="internship" data-page="internship">
+
+        <header>
+          <h2 class="h2 article-title">Internship Experience</h2>
+        </header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase"></ion-icon>
+            </div>
+            <h3 class="h3">Internship Experience</h3>
+          </div>
+
+          <div class="certification-grid">
+            <div class="certification-card">
+              <figure class="certification-img" onclick="openInternshipModal()">
+                <img src="./assets/images/TSC.jpg" alt="TSC Internship Certificate" loading="lazy">
+              </figure>
+              <div class="certification-content">
+                <div class="certification-header">
+                  <ion-icon name="briefcase-outline" class="certification-icon"></ion-icon>
+                  <h4 class="h4 certification-title">Full-Stack Developer Internship</h4>
+                </div>
+                <div class="certification-info">
+                  <span class="certification-issuer">The Special Character</span>
+                  <p class="certification-text">
+                    🚀 Internship Experience at The Special Character 💻✨<br>
+                    I'm excited to share that I've successfully completed my Full-Stack Developer Internship at The Special Character, headquartered in Ahmedabad, Gujarat (India) 🏢<br><br>
+                    📅 Duration: 15th May 2025 – 30th June 2025<br>
+                    🕒 Working Hours: 10:30 AM – 6:30 PM<br>
+                    🏢 Mode: Onsite (Work from Office)<br><br>
+                    During this 1.5-month internship, I had the opportunity to:<br>
+                    ✅ Work on a Live Project – T-Shirt Design Platform<br>
+                    ✅ Gain hands-on experience with React.js, Next.js, Node.js<br>
+                    ✅ Work with powerful frameworks like Medusa.js (eCommerce) and Payload CMS<br>
+                    ✅ Build and maintain responsive UI using HTML, CSS, JavaScript<br>
+                    ✅ Collaborate in a professional team environment and follow agile development practices<br>
+                    ✅ Optimize user experience and deliver clean, modular code<br><br>
+                    I'm truly grateful to the team at The Special Character for their guidance and constant support. 🙌<br>
+                    Thank you for giving me such a valuable opportunity to grow professionally and personally. 🙏<br><br>
+                    The Special Character Yagnesh Modh Jalpa S<br>
+                    📍 Location: Ahmedabad, Gujarat
+                  </p>
+                </div>
+                <div class="certification-footer">
+                  <span class="certification-date">May - June 2025</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="certification-card">
+              <figure class="certification-img" onclick="openCodecModal()">
+                <img src="./assets/images/codec.jpg" alt="Codec Technologies Internship Certificate" loading="lazy">
+              </figure>
+              <div class="certification-content">
+                <div class="certification-header">
+                  <ion-icon name="code-outline" class="certification-icon"></ion-icon>
+                  <h4 class="h4 certification-title">Java Developer Internship</h4>
+                </div>
+                <div class="certification-info">
+                  <span class="certification-issuer">Codec Technologies Pvt. Ltd.</span>
+                  <p class="certification-text">
+                    🚀 Excited to share!<br>
+                    I've successfully completed a Java Developer Internship with Codec Technologies Pvt. Ltd., certified by AICTE, ICAC, and aligned with ISO standards.<br><br>
+                    Over the past month, I gained hands-on experience in Java development, tackled real-world projects, and enhanced my technical and problem-solving skills — all under expert mentorship.<br><br>
+                    Grateful to Codec Technologies for this opportunity and the incredible learning experience!<br>
+                    Looking forward to applying these skills in future projects. 💻🔥
+                  </p>
+                </div>
+                <div class="certification-footer">
+                  <span class="certification-date">2024</span>
+                </div>
+              </div>
+            </div>
           </div>
 
         </section>
@@ -1987,11 +2268,12 @@
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImage");
     const closeBtn = document.querySelector(".close-modal");
+    let internshipInterval;
 
     // Global function to open modal
     window.openImageModal = function(imageSrc) {
       try {
-        console.log('Attempting to open modal with image:', imageSrc); // Debug log
+        console.log('Attempting to open modal with image:', imageSrc);
         if (!imageSrc || !imageSrc.endsWith('.jpg') && !imageSrc.endsWith('.png')) {
           console.error('Invalid image path:', imageSrc);
           return;
@@ -2010,10 +2292,46 @@
       }
     }
 
+    // Internship modal with auto-scroll
+    window.openInternshipModal = function() {
+      const images = ['./assets/images/TSC.jpg', './assets/images/TSC-offer.jpg'];
+      let currentIndex = 0;
+      
+      modal.style.display = "block";
+      modalImg.src = images[currentIndex];
+      document.body.style.overflow = 'hidden';
+      
+      // Auto-scroll every 2 seconds
+      internshipInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        modalImg.src = images[currentIndex];
+      }, 2000);
+    }
+
+    // Codec modal with auto-scroll (3 images)
+    window.openCodecModal = function() {
+      const images = ['./assets/images/codec.jpg', './assets/images/codec-offer1.jpg', './assets/images/codec-offer2.jpg'];
+      let currentIndex = 0;
+      
+      modal.style.display = "block";
+      modalImg.src = images[currentIndex];
+      document.body.style.overflow = 'hidden';
+      
+      // Auto-scroll every 2 seconds
+      internshipInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        modalImg.src = images[currentIndex];
+      }, 2000);
+    }
+
     // Close modal function
     function closeModal() {
       modal.style.display = "none";
       document.body.style.overflow = '';
+      if (internshipInterval) {
+        clearInterval(internshipInterval);
+        internshipInterval = null;
+      }
     }
 
     // Close button click
